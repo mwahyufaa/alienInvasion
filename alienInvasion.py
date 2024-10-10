@@ -10,7 +10,8 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        self.screen = pygame.display.set_mode((1280,720))
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_width, self.settings.screen_height))
         pygame.diplay.set_caption("Alien Invasion")
 
         #set background color
@@ -34,17 +35,3 @@ if __name__ == '__main__':
     #Make a game instance, and run the game.
     ai = AlienInvasion()
     ai.run_game()
-
-class Settings:
-    """A class to store all settings for Alien Invasion."""
-
-    def __init__(self):
-        """Initialize the game's static settings."""
-        #Screen settings
-        self.screen_width = 1280
-        self.screen_height = 720
-        self.bg_color=(0,0,255)
-
-
-
-
