@@ -1,3 +1,4 @@
+import pygame
 class Ship:
     """Class to manage the ship"""
 
@@ -13,7 +14,7 @@ class Ship:
         #Start each new ship at the bottom of the bottom center of the screen
         self.rect.midbottom = self.screen_rect.midbottom
 
-    def bitme(self):
+    def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
     
